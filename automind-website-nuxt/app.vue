@@ -4,6 +4,7 @@
       <ul>
         <li><NuxtLink to="/">首頁</NuxtLink></li> 
         <li><NuxtLink to="/home">產品介紹</NuxtLink></li> 
+        <li><NuxtLink to="/contactus">聯絡我們</NuxtLink></li> 
       </ul>
     </nav>
   </header>
