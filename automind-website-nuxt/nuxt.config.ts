@@ -6,4 +6,6 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/automindweb/' // 使用你的 Repo 名稱作為 baseURL
   }, 
+
+  compatibilityDate: '2024-11-17',
 })
