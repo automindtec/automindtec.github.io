@@ -13,9 +13,13 @@
   "dependencies": {
     "nuxt": "^3.14.159",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "vuetify": "^3.7.4",
+    "@nuxtjs/vuetify": "^2.0.0-next"
   },
   "devDependencies": {
+    "@nuxt/types": "^2.18.1",
+    "@nuxtjs/vuetify": "^2.0.0-beta.2",
     "gh-pages": "^6.2.0"
   }
 }
