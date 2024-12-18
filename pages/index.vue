@@ -24,87 +24,40 @@
     <footer>
       <button @click="scrollToSection('service-features')">服務特色</button>
       <button @click="scrollToSection('service-process')">諮詢流程</button>
-      <button  @click="scrollToSection('service-security')">系統安全</button>
+      <button @click="scrollToSection('service-security')">系統安全</button>
       <button>價格一覽</button>
       <button>免費服務</button>
     </footer>
-    <section id="service-features">
-      <h2>服務特色</h2>
-      <p>貼心即時的服務 x 專業前沿的技術</p>
-      <div>
-        <div>
-          <h3>直覺操作</h3>
-          <p>無痛轉換最新規格</p>
-          <p>定期提升使用者體驗 享受無痛升級新技術</p>
-        </div>
-        <div>
-          <h3>快速專業</h3>
-          <p>貼心快捷的諮詢管道</p>
-          <p>遇到產品任何大小問題 專人在線即時為您處理</p>
-        </div>
-        <div>
-          <h3>透明價格</h3>
-          <p>公開合理的價格</p>
-          <p>數位化系統定期升級 承諾不收取額外費用</p>
-        </div>
-        <div>
-          <h3>簡潔介面</h3>
-          <p>資料顯示好清楚</p>
-          <p>調劑系統實現減法美學 藥師們不必再用眼過度</p>
-        </div>
-      </div>
-    </section>
-    <section id="service-process">
-      <h2>服務流程</h2>
-      <p>一站式解決藥局系統安裝大小事</p>
-      <div>
-        <div>
-          <h3>產品安裝與試用</h3>
-          <p>簡單快速的安裝過程</p>
-          <p>提供核心功能的試用版本</p>
-          <p>客服協助安裝與基本操作</p>
-        </div>
-        <div>
-          <h3>功能設定與調整</h3>
-          <p>根據業務需求客製化系統</p>
-          <p>一鍵設置減少成本</p>
-          <p>快速介紹與更新系統</p>
-        </div>
-        <div>
-          <h3>資料無痛遷移</h3>
-          <p>提供資料遷移工具支援系統資料匯入</p>
-          <p>專業團隊確保資料完整與安全</p>
-          <p>減少手動輸入節省時間與成本</p>
-        </div>
-        <div>
-          <h3>用戶試用回饋與客製調整</h3>
-          <p>試用期間收集用戶回饋進行調整</p>
-          <p>確保系統符合用戶需求減少初期適應成本</p>
-          <p>達到最佳工作流程</p>
-        </div>
-        <div>
-          <h3>正式啟用與支援</h3>
-          <p>提供正式啟用指導快速過渡</p>
-          <p>提供技術支援確保順利使用</p>
-          <p>持續更新與培訓提升效率</p>
-        </div>
-      </div>
-    </section>
+    <ServiceFeatures/>
+    <ServiceProcess/>
+    <ServiceSecurity/>
+    
+    
   </div>
 </template>
 
 <script>
+import ServiceFeatures from "./service-features.vue";
+import ServiceProcess from "./service-process.vue"; 
+import ServiceSecurity from "./system-security.vue";
+
 export default {
+  components: {
+    ServiceFeatures,
+    ServiceProcess,
+    ServiceSecurity,
+  },
   methods: {
     scrollToSection(sectionId) {
       const section = document.getElementById(sectionId);
       if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
+        section.scrollIntoView({ behavior: "smooth" });
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
+ 
 
 <style>
 header nav {
