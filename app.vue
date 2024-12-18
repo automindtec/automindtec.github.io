@@ -12,7 +12,20 @@
   <NuxtPage />
 </template>
 
- <style>
+<script>
+export default {
+  methods: {
+    scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+}
+</script>
+
+<style>
 header nav {
   display: flex;
   justify-content: center; /* 水平置中 */
@@ -50,4 +63,4 @@ header nav ul li a:hover {
   background-color: #f8f9fa; /* 懸停時的背景顏色 */
   border-radius: 4px; /* 添加圓角 */
 }
- </style>
+</style>
